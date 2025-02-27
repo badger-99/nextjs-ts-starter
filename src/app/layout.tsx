@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
+import { TailwindIndicator } from "@/components/tailwind-screen-indicator";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -38,6 +39,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster richColors />
+          <TailwindIndicator />
         </ThemeProvider>
       </body>
     </html>
