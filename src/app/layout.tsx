@@ -25,15 +25,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <ThemeProvider
-        attribute='class'
-        defaultTheme='system'
-        enableSystem={true}
-        disableTransitionOnChange={true}
-        themes={['dark', 'light', 'system']}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-      </ThemeProvider>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem={true}
+          disableTransitionOnChange={true}
+          themes={['dark', 'light', 'system']}
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
